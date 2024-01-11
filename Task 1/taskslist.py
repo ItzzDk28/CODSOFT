@@ -18,15 +18,15 @@ class TaskList:
     print(self.task_list)
 
     self.new_task_window = tk.Tk()
-    self.new_task_window.title("TO-DO Config!!")
+    self.new_task_window.title("TO-DO Configuration")
     self.new_task_window.geometry("480x550")
-    self.new_task_window.config(background="black", padx=20, pady=20)
+    self.new_task_window.config(background="#FAEBD7", padx=20, pady=20)
 
     self.enter_name = tk.Label(master=self.new_task_window,
-                               text="Enter name:",
-                               background="black",
-                               foreground="white",
-                               width=30,
+                               text="Enter the Date: ",
+                               background="#FAEBD7",
+                               foreground="black",
+                               width=15,
                                height=1,
                                anchor="w")
 
@@ -46,10 +46,10 @@ class TaskList:
     self.save_button.grid(row=1, column=1, sticky="W", padx=(20, 0))
 
     self.to_do_task_label = tk.Label(master=self.new_task_window,
-                                     text="Enter task",
-                                     background="black",
-                                     foreground="white",
-                                     width=30,
+                                     text="Enter the task: ",
+                                     background="#FAEBD7",
+                                     foreground="black",
+                                     width=15,
                                      height=1,
                                      anchor="w")
 
@@ -65,7 +65,7 @@ class TaskList:
                            pady=(20, 0))
 
     self.button_frame = tk.Frame(master=self.new_task_window,
-                                 background="black")
+                                 background="#FAEBD7")
     self.button_frame.grid(row=4, column=0, columnspan=2)
 
     self.add_button = tk.Button(master=self.button_frame,

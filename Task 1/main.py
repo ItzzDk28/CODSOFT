@@ -11,14 +11,14 @@ class GUI:
     self.task_list_dict = {}
 
     self.main_window = tk.Tk()
-    self.main_window.title("TO-DO Lists!!")
-    self.main_window.geometry("525x525")
+    self.main_window.title("A TO-DO List!!")
+    self.main_window.geometry("500x500+750+250")
     self.main_window.config(padx=20, pady=20, background="black")
 
     self.to_do_list_label = tk.Label(master=self.main_window,
                                      text="Select a To-Do List",
-                                     background="black",
-                                     foreground="white",
+                                     background="#FAEBD7",
+                                     foreground="#8B4513",
                                      width=30,
                                      height=1,
                                      anchor="w")
@@ -44,7 +44,7 @@ class GUI:
                                 command=self.new_button_clicked,
                                 width=15,
                                 height=3,
-                                font=("Arial", 9, "bold"))
+                                font=("Consolas", 9, "bold"))
 
     self.new_button.grid(row=1, column=1, padx=(20, 0))
 
@@ -53,7 +53,7 @@ class GUI:
                                    command=self.delete_button_clicked,
                                    width=15,
                                    height=3,
-                                   font=("Arial", 9, "bold"))
+                                   font=("Consolas", 9, "bold"))
 
     self.delete_button.grid(row=1, column=2, padx=(20, 0))
 
@@ -62,7 +62,7 @@ class GUI:
                                  command=self.edit_button_clicked,
                                  width=15,
                                  height=3,
-                                 font=("Arial", 9, "bold"))
+                                 font=("Consolas", 9, "bold"))
 
     self.edit_button.grid(row=2, column=1, padx=(20, 0))
 
@@ -71,7 +71,7 @@ class GUI:
                                  command=self.exit_button_clicked,
                                  width=15,
                                  height=3,
-                                 font=("Arial", 9, "bold"))
+                                 font=("Consolas", 9, "bold"))
 
     self.exit_button.grid(row=2, column=2, padx=(20, 0))
 

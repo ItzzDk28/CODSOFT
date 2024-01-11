@@ -26,23 +26,23 @@ def get_result():
 
 
 def button_clicked(value):
-  if value == "clear":
+  if value == "Clear":
     CALCULATE_LIST.clear()
     calculation.format_error = ""
 
-  elif value == "del":
+  elif value == "Del":
     try:
       CALCULATE_LIST.pop(len(CALCULATE_LIST) - 1)
     except IndexError:
       pass
 
-  elif value == "exit":
+  elif value == "Exit":
     main_window.destroy()
     return
 
   result_canvas.itemconfig(result_text, text="")
 
-  if value not in ["clear", "del"]:
+  if value not in ["Clear", "Del"]:
     CALCULATE_LIST.append(value)
 
   display_text = ""
@@ -74,12 +74,12 @@ result_text = result_canvas.create_text((50, 50),
                                         text="",
                                         anchor="w",
                                         width=WIDTH - 100,
-                                        font=("Arial", 20),
+                                        font=("Consolas", 20),
                                         fill="white")
 
 BUTTON = [["7", "8", "9", " + "], ["4", "5", "6", " - "],
-          ["1", "2", "3", " * "], ["0", "del", "clear", " / "],
-          [" ( ", " ) ", "exit", " = "]]
+          ["1", "2", "3", " * "], ["0", "Del", "Clear", " / "],
+          [" ( ", " ) ", "Exit", " = "]]
 
 for row in range(0, 5):
   for column in range(0, 4):
@@ -89,7 +89,7 @@ for row in range(0, 5):
         width=BUTTON_WIDTH,
         height=BUTTON_HEIGHT,
         command=lambda value=BUTTON[row][column]: button_clicked(value),
-        font=("Arial", 9, "bold"))
+        font=("Consolas", 9, "bold"))
 
     number_button.grid(row=row,
                        column=column,

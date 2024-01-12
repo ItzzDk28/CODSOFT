@@ -74,7 +74,7 @@ result_text = result_canvas.create_text((50, 50),
                                         text="",
                                         anchor="w",
                                         width=WIDTH - 100,
-                                        font=("Consolas", 20),
+                                        font=("Consolas", 30),
                                         fill="white")
 
 BUTTON = [["7", "8", "9", " + "], ["4", "5", "6", " - "],

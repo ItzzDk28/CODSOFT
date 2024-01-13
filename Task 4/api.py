@@ -3,7 +3,7 @@ import requests
 API_KEY = "d5473c61b2546fbd558aa877155184a6"
 NAME_TO_COORD_URL = "http://api.openweathermap.org/geo/1.0/direct"
 ZIP_TO_COORD_URL = "http://api.openweathermap.org/geo/1.0/zip"
-BASE_URL = "https://api.openweathermap.org/data/2.5/onecall"
+BASE_URL = "https://api.openweathermap.org/data/2.5/forecast"
 
 
 class API:
@@ -42,7 +42,7 @@ class API:
   def get_coords(self):
     if self.search_with == "name":
       response = requests.get(url=NAME_TO_COORD_URL,
-                              params=self.coord_params_direct)
+      params=self.coord_params_direct)
       response.raise_for_status()
       self.coords = [response.json()[0]["lat"], response.json()[0]["lon"]]
     elif self.search_with == "zip":
@@ -68,7 +68,8 @@ class API:
         "icon": None
     }
 
-    response = requests.get(url=BASE_URL, params=self.weather_params)
+    response = requests.get(url=BASE_URL,     
+    params=self.weather_params)
     response.raise_for_status()
     info = response.json()
     useful_info["temperature"] = info["current"]["temp"]

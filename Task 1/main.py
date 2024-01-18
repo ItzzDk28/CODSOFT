@@ -1,6 +1,6 @@
 import tkinter as tk
 from save import ReadWriteVar
-from tasklists import TaskList
+from taskslist import TaskList
 
 
 class GUI:
